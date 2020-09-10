@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "caderneta_de_gastos"
