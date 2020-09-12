@@ -7,7 +7,11 @@ import android.os.Bundle;
 public class MainActivity extends AppCompatActivity {
 
     //codigo recebido, celso
-    //vamos tentar fazer isso errado
+
+    //vamos tentar fazer isso certo
+
+    //codigo gabriel
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
