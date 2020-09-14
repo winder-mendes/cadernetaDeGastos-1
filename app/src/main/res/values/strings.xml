@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">caderneta_de_gastos</string>
+
+    <string name="addGasto">Adicionar Gasto</string>
+    <string name="nome">Nome</string>
+    <string name="valor">Valor</string>
+    <string name="data">Data</string>
+    <string name="descricao">Descrição</string>
+    <string name="adicionar">Adicionar</string>
+
+    <string-array name="tipo_gasto">
+        <item>Despesa</item>
+        <item>Investimento</item>
+    </string-array>
+
+    <string-array name="categorias">
+        <item>Saude</item>
+        <item>Supermecado</item>
+        <item>Combustível</item>
+        <item>Entretenimento</item>
+    </string-array>
+
+    <string-array name="estabelecimentos">
+        <item>Sem estabelecimento</item>
+    </string-array>
 </resources>
