@@ -23,4 +23,20 @@
     <string-array name="estabelecimentos">
         <item>Sem estabelecimento</item>
     </string-array>
+
+    <string name="LoginTitle">Caderneta de Gastos</string>
+    <string name="user">Usuario</string>
+    <string name="password">Senha</string>
+    <string name="btnEntrar">Entrar</string>
+    <string name="register">Criar Conta</string>
+
+    <string name="createAccount">Criar Conta</string>
+    <string name="userName">Nome de Usuario</string>
+    <string name="email">Email</string>
+    <string name="phoneNumber">Numero de Telefone</string>
+    <string name="createPassword">Senha</string>
+    <string name="confirmPassword">Confirmar Senha</string>
+    <string name="btnRegister">Cadastrar</string>
+    <string name="option">Ou se ja tem uma conta</string>
+    <string name="btnLogin">Entrar</string>
 </resources>
