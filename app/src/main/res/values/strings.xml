@@ -39,4 +39,12 @@
     <string name="btnRegister">Cadastrar</string>
     <string name="option">Ou se ja tem uma conta</string>
     <string name="btnLogin">Entrar</string>
+
+    <string name="ver_gastos">Ver Gastos</string>
+    <string name="despesa">Despesa</string>
+
+    <string name="gasto_mensal">Gasto Mensal</string>
+    <string name="saldo_mensal">Saldo Mensal</string>
+    <string name="renda_mensal">Renda Mensal</string>
+    <string name="gasto_total">Gasto Total</string>
 </resources>
