@@ -2,6 +2,7 @@ package com.cadernetadegastos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -28,8 +29,15 @@ public class AlterarRenda extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        String renda = editTexNovaRenda.getText().toString();
+        SharedPreferences pref = getSharedPreferences("config", 0);
+        Long validid = pref.getLong("logado", 1);
         if (v == button){
-            
+            UsuarioDao ud = new UsuarioDao(this);
+            Usuario user = ud.get(validid);
+            user.setRenda(Float.parseFloat(renda));
+            ud.update(user);
+            finish();
         }
 
     }
