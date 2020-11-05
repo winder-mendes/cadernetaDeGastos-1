@@ -37,7 +37,7 @@ public class AtvLogin extends AppCompatActivity {
     }
 
     private void mudarParaTelaHome(){
-        Intent home = new Intent(this,null);
+        Intent home = new Intent(this,AtvHome.class);
 
         startActivity(home);
     }
