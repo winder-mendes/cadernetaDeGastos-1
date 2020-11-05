@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class AlterarRenda extends AppCompatActivity implements View.OnClickListener {
+public class AtvAlterarRenda extends AppCompatActivity implements View.OnClickListener {
 
     EditText editTexNovaRenda;
     Button button;

@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class VerGastos extends AppCompatActivity {
+public class AtvHome extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.atv_ver_gastos);
+        setContentView(R.layout.activity_home);
     }
 }
