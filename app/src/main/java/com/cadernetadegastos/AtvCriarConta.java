@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class CriarConta extends AppCompatActivity {
+public class AtvCriarConta extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

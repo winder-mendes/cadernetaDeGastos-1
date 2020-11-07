@@ -4,17 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
-
-    //codigo recebido, celso
-
-    //vamos tentar fazer isso certo
-
-    //codigo gabriel
+public class AtvVerGastos extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.atv_ver_gastos);
     }
 }

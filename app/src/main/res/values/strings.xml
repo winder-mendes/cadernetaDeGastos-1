@@ -47,17 +47,17 @@
     <string name="saldo_mensal">Saldo Mensal</string>
     <string name="renda_mensal">Renda Mensal</string>
     <string name="gasto_total">Gasto Total</string>
-    
+
     <string name="TextAlterarRenda">Alterar Renda</string>
     <string name="editTexNovaRenda">Nova Renda</string>
     <string name="btnAlterar">Alterar</string>
-    
-    <string name="btn_adicionarGastos" >Adicionar Gastos</string>
+
+    <string name="btn_adicionarGastos">Adicionar Gastos</string>
     <string name="btn_alterarRenda">Alterar Renda</string>
     <string name="btn_verGastos">Ver Gastos</string>
     <string name="btn_criarCategoria">Criar Categoria</string>
     <string name="btn_criarEstabelecimento">Criar Estabelecimento</string>
     <string name="textView_cadernetaDeGastos">Caderneta de Gastos</string>
-    
-    
+
+
 </resources>
