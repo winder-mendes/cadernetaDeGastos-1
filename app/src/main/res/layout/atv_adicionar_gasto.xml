@@ -19,13 +19,13 @@
         tools:text="@string/addGasto" />
 
     <EditText
-        android:id="@+id/editNome"
+        android:id="@+id/editDescricao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5pt"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/nome" />
+        android:text="@string/descricao" />
 
     <EditText
         android:id="@+id/editValor"
@@ -44,15 +44,6 @@
         android:ems="10"
         android:inputType="date"
         android:text="@string/data" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5pt"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/descricao" />
 
     <Spinner
         android:id="@+id/spinTipoGasto"
@@ -80,5 +71,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5pt"
+        android:onClick="adicionar"
         android:text="@string/adicionar" />
 </LinearLayout>
