@@ -55,6 +55,7 @@
         android:id="@+id/btn_adicionarGastos"
         android:layout_width="210dp"
         android:layout_height="56dp"
+        android:onClick="addGasto"
         android:text="Adicionar Gastos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
