@@ -30,28 +30,6 @@
         app:layout_constraintVertical_bias="0.404" />
 
     <Button
-        android:id="@+id/btn_criarCategoria"
-        android:layout_width="207dp"
-        android:layout_height="51dp"
-        android:text="Criar Categoria"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btn_criarEstabelecimento"
-        android:layout_width="205dp"
-        android:layout_height="51dp"
-        android:text="Criar Estabelecimento"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.598" />
-
-    <Button
         android:id="@+id/btn_adicionarGastos"
         android:layout_width="210dp"
         android:layout_height="56dp"
