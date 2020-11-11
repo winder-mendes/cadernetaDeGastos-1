@@ -19,5 +19,13 @@ public class AtvHome extends AppCompatActivity {
         startActivity(atvGastos);
     }
 
+    public void alterarRenda(View v){
+        Intent atvGastos = new Intent(this,AtvAlterarRenda.class);
+        startActivity(atvGastos);
+    }
 
+    public void verGastos(View v){
+        Intent atvGastos = new Intent(this,AtvVerGastos.class);
+        startActivity(atvGastos);
+    }
 }
