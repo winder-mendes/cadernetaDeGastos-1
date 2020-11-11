@@ -50,7 +50,7 @@ public class AtvLogin extends AppCompatActivity {
         if(usuario != null){
             SharedPreferences pref = getSharedPreferences(CONFIG,0);
             SharedPreferences.Editor editor = pref.edit();
-            editor.putLong("login",usuario.getId());
+            editor.putLong("logado",usuario.getId());
             editor.commit();
             mudarParaTelaHome();
         }else{
