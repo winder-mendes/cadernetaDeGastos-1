@@ -21,6 +21,8 @@ public class AtvLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
+        Conexao.incerirDadosIniciais(this);
+
         usuarioLogado = new UsuarioLogado(this);
 
         user = findViewById(R.id.user);
