@@ -24,7 +24,7 @@
         android:layout_marginBottom="5pt"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/descricao" />
+        android:hint="@string/descricao" />
 
     <EditText
         android:id="@+id/editValor"
@@ -32,8 +32,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5pt"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/valor" />
+        android:inputType="numberDecimal"
+        android:hint="@string/valor" />
 
     <EditText
         android:id="@+id/editData"
@@ -42,7 +42,7 @@
         android:layout_marginBottom="5pt"
         android:ems="10"
         android:inputType="date"
-        android:text="@string/data" />
+        android:hint="@string/data" />
 
     <Spinner
         android:id="@+id/spinTipoGasto"
