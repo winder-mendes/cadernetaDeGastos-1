@@ -61,9 +61,7 @@ public class AtvAdicionarGasto extends AppCompatActivity {
     }
 
     private Usuario usuarioLogado() {
-        UsuarioDao usuarioDao = new UsuarioDao( this);
-        SharedPreferences pref = getSharedPreferences("config", 0);
-        Long id = pref.getLong("logado", 1);
-        return usuarioDao.get(id);
+        UsuarioLogado usuarioLogado = new UsuarioLogado(this);
+        return usuarioLogado.logado();
     }
 }

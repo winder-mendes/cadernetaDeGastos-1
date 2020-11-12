@@ -1,8 +1,6 @@
 package com.cadernetadegastos;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,7 +19,6 @@ public class AtvAlterarRenda extends AppCompatActivity implements View.OnClickLi
         button = findViewById(R.id.button);
         button.setOnClickListener(this);
         editTexNovaRenda = findViewById(R.id.editTexNovaRenda);
-
     }
 
 
@@ -29,9 +26,9 @@ public class AtvAlterarRenda extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
+        UsuarioLogado usuarioLogado = new UsuarioLogado(this);
+        Long validid = usuarioLogado.logadoId();
         String renda = editTexNovaRenda.getText().toString();
-        SharedPreferences pref = getSharedPreferences("config", 0);
-        Long validid = pref.getLong("logado", 1);
         if (v == button){
             UsuarioDao ud = new UsuarioDao(this);
             Usuario user = ud.get(validid);

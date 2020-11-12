@@ -1,7 +1,6 @@
 package com.cadernetadegastos;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -13,14 +12,16 @@ import java.util.List;
 
 public class AtvLogin extends AppCompatActivity {
 
-    private final String CONFIG = "config";
-    EditText user;
-    EditText password;
+    private UsuarioLogado usuarioLogado;
+    private EditText user;
+    private EditText password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
+
+        usuarioLogado = new UsuarioLogado(this);
 
         user = findViewById(R.id.user);
         password =findViewById(R.id.password);
@@ -29,9 +30,8 @@ public class AtvLogin extends AppCompatActivity {
     }
 
     private void oUsuarioEstaLogado() {
-        SharedPreferences pref = getSharedPreferences(CONFIG,0);
-        long id = pref.getLong("logado",0);
-        if(id > 0){
+        Long id = usuarioLogado.logadoId();
+        if(id != null){
             mudarParaTelaHome();
         }
     }
@@ -48,10 +48,7 @@ public class AtvLogin extends AppCompatActivity {
 
         Usuario usuario = buscar(login,senha);
         if(usuario != null){
-            SharedPreferences pref = getSharedPreferences(CONFIG,0);
-            SharedPreferences.Editor editor = pref.edit();
-            editor.putLong("logado",usuario.getId());
-            editor.commit();
+            usuarioLogado.logar(usuario);
             mudarParaTelaHome();
         }else{
             Toast.makeText(this,"invalido",Toast.LENGTH_SHORT).show();
