@@ -28,4 +28,10 @@ public class AtvHome extends AppCompatActivity {
         Intent atvGastos = new Intent(this,AtvVerGastos.class);
         startActivity(atvGastos);
     }
+
+    public void logout(View v){
+        UsuarioLogado usuarioLogado = new UsuarioLogado(this);
+        usuarioLogado.logout();
+        finish();
+    }
 }
