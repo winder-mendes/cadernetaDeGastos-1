@@ -30,6 +30,9 @@ public class AtvAdicionarGasto extends AppCompatActivity {
         editData = findViewById(R.id.editData);
         editDescricao = findViewById(R.id.editDescricao);
         spinTipoGasto = findViewById(R.id.spinTipoGasto);
+
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        editData.setText(sdf.format(new Date()));
     }
 
     public void adicionar(View view){
