@@ -25,12 +25,31 @@ public class AtvVerGastos extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.atv_ver_gastos);
 
+        extraindoCampos();
+
+        UsuarioLogado usuarioLogado = new UsuarioLogado(this);
+        Usuario usuario = usuarioLogado.logado();
+        List<Lancamento> lancamentos = criandoDadosDeExemplo();
+        calcular(lancamentos,usuario.getRenda());
+    }
+
+    private void calcular(List<Lancamento> lancamentos,float renda){
+        Calculo calculo = new Calculo(lancamentos, renda);
+
+        txtValorGastoMensal.setText("R$ " + String.valueOf(calculo.gastoMensal()));
+        txtValorSaldoMensal.setText("R$ " +String.valueOf(calculo.retornSaldo()));
+        txtValorRendaMensal.setText("R$ " +String.valueOf(calculo.retornaRenda()));
+        txtValorGastoTotal.setText("R$ " +String.valueOf(calculo.retornaGastoTotal()));
+    }
+
+    private void extraindoCampos() {
         txtValorGastoMensal = findViewById(R.id.txtValorGastoMensal);
         txtValorSaldoMensal = findViewById(R.id.txtValorSaldoMensal);
         txtValorRendaMensal= findViewById(R.id.txtValorRendaMensal);
         txtValorGastoTotal = findViewById(R.id.txtValorGastoTotal);
+    }
 
-
+    private List<Lancamento> criandoDadosDeExemplo(){
         Lancamento l1 = new Lancamento();
         Lancamento l2 = new Lancamento();
         Lancamento l3 = new Lancamento();
@@ -43,7 +62,6 @@ public class AtvVerGastos extends AppCompatActivity  {
         c.set(2020, Calendar.NOVEMBER, 9);
         Date data3 = c.getTime();
 
-        float renda = 500;
         l1.setId(1);
         l1.setValor(100);
         l1.setData(data);
@@ -58,15 +76,7 @@ public class AtvVerGastos extends AppCompatActivity  {
         lista.add(l1);
         lista.add(l2);
         lista.add(l3);
-
-        Calculo calculo = new Calculo(lista, renda);
-
-        txtValorGastoMensal.setText("R$ " + String.valueOf(calculo.gastoMensal()));
-        txtValorSaldoMensal.setText("R$ " +String.valueOf(calculo.retornSaldo()));
-        txtValorRendaMensal.setText("R$ " +String.valueOf(calculo.retornaRenda()));
-        txtValorGastoTotal.setText("R$ " +String.valueOf(calculo.retornaGastoTotal()));
-
-
+        return lista;
     }
 
 }
