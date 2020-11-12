@@ -45,11 +45,20 @@ public class Calculo {
     @RequiresApi(api = Build.VERSION_CODES.O)
     public float gastoMensal() {
         float gastoMes = 0;
-        LocalDate currentdate = LocalDate.now();
-        Month currentMonth = currentdate.getMonth();
+
+        Calendar dtAtual = Calendar.getInstance();
+        dtAtual.setTime(new Date());
+        int mesAtual = dtAtual.get(Calendar.MONTH);
+        int anoAtual = dtAtual.get(Calendar.YEAR);
+
         for (Lancamento lancamento : lista) {
-            Month dtLancamento = Month.of(lancamento.getData().getMonth());
-            if(dtLancamento == currentMonth){
+
+            Calendar dtLancamento = Calendar.getInstance();
+            dtLancamento.setTime(lancamento.getData());
+            int mesLancamento = dtLancamento.get(Calendar.MONTH);
+            int anoLancamento = dtLancamento.get(Calendar.YEAR);
+
+            if(mesAtual == mesLancamento && anoAtual == anoLancamento ){
                 gastoMes = gastoMes + lancamento.getValor();
             }
         }

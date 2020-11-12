@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".AtvHome"></activity>
         <activity android:name=".AtvAlterarRenda" />
-        <activity android:name=".AtvVerGastos" />
+        <activity android:name=".AtvVerGastos"/>
         <activity android:name=".AtvAdicionarGasto" />
         <activity android:name=".AtvCriarConta" />
         <activity android:name=".AtvLogin">
