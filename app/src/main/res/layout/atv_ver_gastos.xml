@@ -11,11 +11,10 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/ver_gastos"
         android:textSize="30sp"
         android:gravity="center_horizontal"
-        android:layout_marginBottom="10dp"
-        tools:text="@string/ver_gastos" />
+        android:layout_marginBottom="10dp" />
 
     <TableLayout
         android:layout_width="match_parent"

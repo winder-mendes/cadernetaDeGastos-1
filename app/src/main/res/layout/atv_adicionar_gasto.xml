@@ -14,9 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5pt"
         android:gravity="center_horizontal"
-        android:text="TextView"
         android:textSize="30sp"
-        tools:text="@string/addGasto" />
+        android:text="@string/addGasto" />
 
     <EditText
         android:id="@+id/editDescricao"
