@@ -16,111 +16,12 @@
         android:gravity="center_horizontal"
         android:layout_marginBottom="10dp" />
 
-    <TableLayout
+
+    <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:stretchColumns="0">
+        android:id="@+id/lista"/>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text="@string/despesa"
-                android:textSize="18sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text="@string/valor"
-                android:textSize="18sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text="@string/data"
-                android:textSize="18sp" />
-
-        </TableRow>
-
-        <View android:layout_width="wrap_content"
-            android:layout_height="1dp"
-            android:background="#000000"/>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text="Despesa 1"
-                android:textSize="14sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text="R$ 50,00"
-                android:textSize="14sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text="30/08/20"
-                android:textSize="14sp" />
-        </TableRow>
-
-        <View android:layout_width="wrap_content"
-            android:layout_height="1dp"
-            android:background="#000000"/>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text="Despesa 2"
-                android:textSize="14sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text="R$ 20,00"
-                android:textSize="14sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text="02/09/20"
-                android:textSize="14sp" />
-        </TableRow>
-
-        <View android:layout_width="wrap_content"
-            android:layout_height="1dp"
-            android:background="#000000"/>
-    </TableLayout>
 
     <LinearLayout
         android:id="@+id/rodape"

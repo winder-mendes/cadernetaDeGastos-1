@@ -26,8 +26,6 @@ public class Calculo {
         return renda;
     }
 
-
-    @RequiresApi(api = Build.VERSION_CODES.O)
     public float retornSaldo() {
         float gasto = gastoMensal();
         float resultado = renda - gasto;
@@ -42,7 +40,6 @@ public class Calculo {
         return somaTotal;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
     public float gastoMensal() {
         float gastoMes = 0;
 

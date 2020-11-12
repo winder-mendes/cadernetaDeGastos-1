@@ -1,5 +1,10 @@
 package com.cadernetadegastos;
 
+import android.util.Log;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Lancamento {
@@ -87,5 +92,25 @@ public class Lancamento {
 
     public void setFornecedor(Fornecedor fornecedor) {
         this.fornecedor = fornecedor;
+    }
+
+    @Override
+    public String toString() {
+        return this.descricao + "        " + this.valor;
+    }
+
+    public String conteudo(){
+        String categoria = this.categoria == null ? "" : "categoria= " + this.categoria.getDescricao() + '\n';
+        String fornecedor = this.fornecedor == null ? "" : "fornecedor= " + this.fornecedor.getNome();
+        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+        String data = df.format(this.data);
+        return
+                "id=" + id + '\n' +
+                        "tipo= " + tipo + '\n' +
+                        "data= " + data + '\n' +
+                        "valor= " + valor + '\n' +
+                        "descricao= " + descricao + '\n' +
+                        categoria +
+                        fornecedor;
     }
 }

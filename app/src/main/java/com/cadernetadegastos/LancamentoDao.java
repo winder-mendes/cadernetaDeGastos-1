@@ -76,6 +76,38 @@ public class LancamentoDao implements Dao<Lancamento>{
         return banco.update(TABELA,values,"id = ?", new String[]{String.valueOf(lancamento.getId())});
     }
 
+    public List<Lancamento> list(Usuario usuario) {
+        Cursor c = banco.query(TABELA, CAMPOS, "id_usuario = " + usuario.getId(), null, null, null, null);
+        List<Lancamento> lista = new ArrayList<>();
+        while (c.moveToNext()) {
+            Lancamento lancamento = new Lancamento();
+            lancamento.setId(c.getLong(0));
+            lancamento.setTipo(c.getString(1));
+
+            DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+            try {
+                String data = c.getString(2);
+                Log.i("DAO","data " + data);
+                lancamento.setData(df.parse(data));
+            } catch (ParseException e) {
+                lancamento.setData(null);
+                e.printStackTrace();
+            }
+            lancamento.setValor(c.getFloat(3));
+            lancamento.setDescricao(c.getString(4));
+            c.getLong(5);
+            c.getLong(6);
+            c.getLong(7);
+            lancamento.setUsuario(new UsuarioDao(context).get(c.getLong(5)));
+            lancamento.setCategoria(new CategoriaDao(context).get(c.getLong(6)));
+            lancamento.setFornecedor(new FornecedorDao(context).get(c.getLong(7)));
+
+            lista.add(lancamento);
+        }
+        return lista;
+    }
+
+
     @Override
     public List<Lancamento> list() {
         Cursor c = banco.query(TABELA, CAMPOS, null, null, null, null, null);
