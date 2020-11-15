@@ -69,4 +69,8 @@ public class AtvLogin extends AppCompatActivity {
         }
         return  null;
     }
+    public void btnCriarConta(View v){
+        Intent atvCriarConta = new Intent(this,AtvCriarConta.class);
+        startActivity(atvCriarConta);
+    }
 }

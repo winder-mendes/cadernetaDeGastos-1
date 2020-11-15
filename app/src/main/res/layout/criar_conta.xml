@@ -35,7 +35,7 @@
         tools:text="@string/userName" />
 
     <EditText
-        android:id="@+id/emailRegister"
+        android:id="@+id/passwordRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -65,7 +65,7 @@
         tools:text="@string/phoneNumber" />
 
     <EditText
-        android:id="@+id/passwordRegister"
+        android:id="@+id/confirmPasswordRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -80,7 +80,7 @@
         tools:text="@string/confirmPassword" />
 
     <EditText
-        android:id="@+id/confirmPasswordRegister"
+        android:id="@+id/emailRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -98,6 +98,7 @@
         android:id="@+id/btnFinishRegister"
         android:layout_width="202dp"
         android:layout_height="41dp"
+        android:onClick="btnCadastrar"
         android:text="Cadastrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -125,6 +126,7 @@
         android:id="@+id/btnGoForLogin"
         android:layout_width="203dp"
         android:layout_height="40dp"
+        android:onClick="btnEntrar"
         android:text="Entrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
