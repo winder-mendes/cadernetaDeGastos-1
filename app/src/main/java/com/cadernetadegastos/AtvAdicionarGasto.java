@@ -19,6 +19,8 @@ public class AtvAdicionarGasto extends AppCompatActivity {
     private EditText editData;
     private EditText editDescricao;
     private Spinner spinTipoGasto;
+    private Spinner spinEstabelecimento;
+    private Spinner spinCategoria;
 
 
     @Override
@@ -30,6 +32,8 @@ public class AtvAdicionarGasto extends AppCompatActivity {
         editData = findViewById(R.id.editData);
         editDescricao = findViewById(R.id.editDescricao);
         spinTipoGasto = findViewById(R.id.spinTipoGasto);
+        spinEstabelecimento = findViewById(R.id.spinEstabelecimento);
+        spinCategoria = findViewById(R.id.spinCategoria);
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         editData.setText(sdf.format(new Date()));
