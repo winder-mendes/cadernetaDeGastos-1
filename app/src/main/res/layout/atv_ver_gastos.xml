@@ -76,6 +76,23 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="Saldo convertido em dolar:"
+                    android:layout_marginRight="5dp"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/txtValorSaldoDolar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" Calculando..."
+                    android:textSize="14sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="Renda Mensal:"
                     android:layout_marginRight="5dp"
                     android:textSize="14sp" />

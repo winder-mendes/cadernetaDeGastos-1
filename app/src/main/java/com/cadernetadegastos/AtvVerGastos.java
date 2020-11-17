@@ -12,10 +12,17 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class AtvVerGastos extends AppCompatActivity  implements AdapterView.OnItemClickListener{
 
@@ -23,6 +30,7 @@ public class AtvVerGastos extends AppCompatActivity  implements AdapterView.OnIt
    TextView txtValorSaldoMensal;
    TextView txtValorRendaMensal;
    TextView txtValorGastoTotal;
+   TextView txtValorSaldoDolar;
    ArrayAdapter<Lancamento> arrayAdapter;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -51,10 +59,43 @@ public class AtvVerGastos extends AppCompatActivity  implements AdapterView.OnIt
     private void calcular(List<Lancamento> lancamentos, float renda){
         Calculo calculo = new Calculo(lancamentos, renda);
 
+        float saldoMensal = calculo.retornSaldo();
         txtValorGastoMensal.setText("R$ " + String.valueOf(calculo.gastoMensal()));
-        txtValorSaldoMensal.setText("R$ " +String.valueOf(calculo.retornSaldo()));
+        txtValorSaldoMensal.setText("R$ " +String.valueOf(saldoMensal));
         txtValorRendaMensal.setText("R$ " +String.valueOf(calculo.retornaRenda()));
         txtValorGastoTotal.setText("R$ " +String.valueOf(calculo.retornaGastoTotal()));
+        dolar(saldoMensal,txtValorSaldoDolar);
+    }
+
+    private void dolar(float saldo,TextView textView){
+
+        BigDecimal saldoReais = new BigDecimal(saldo);
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://economia.awesomeapi.com.br")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        ServiceMoeda serviceMoeda = retrofit.create(ServiceMoeda.class);
+        Call<List<MoedaEstrangeira>> call = serviceMoeda.getMoeda("USD-BRL");
+        call.enqueue(new Callback<List<MoedaEstrangeira>>() {
+            @Override
+            public void onResponse(Call<List<MoedaEstrangeira>> call, Response<List<MoedaEstrangeira>> response) {
+                if(response.isSuccessful()){
+                    MoedaEstrangeira moeda = response.body().get(0);
+                    BigDecimal valorDolar = new BigDecimal(moeda.getBid());
+                    BigDecimal dolar = saldoReais.divide(valorDolar,BigDecimal.ROUND_UP);
+
+                    textView.setText("$ " + dolar.toString());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<MoedaEstrangeira>> call, Throwable t) {
+                textView.setText("Não foi possível calcular");
+                t.printStackTrace();
+            }
+        });
     }
 
     private void extraindoCampos() {
@@ -62,6 +103,7 @@ public class AtvVerGastos extends AppCompatActivity  implements AdapterView.OnIt
         txtValorSaldoMensal = findViewById(R.id.txtValorSaldoMensal);
         txtValorRendaMensal= findViewById(R.id.txtValorRendaMensal);
         txtValorGastoTotal = findViewById(R.id.txtValorGastoTotal);
+        txtValorSaldoDolar = findViewById(R.id.txtValorSaldoDolar);
     }
 
     private List<Lancamento> criandoDadosDeExemplo(){
