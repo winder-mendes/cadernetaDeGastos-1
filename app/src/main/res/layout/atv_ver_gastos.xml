@@ -44,13 +44,15 @@
                     android:layout_height="wrap_content"
                     android:text="Gasto Mensal:"
                     android:layout_marginRight="5dp"
-                    android:textSize="14sp" />
+                    style="@style/rodape"
+                     />
                 <TextView
                     android:id="@+id/txtValorGastoMensal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="R$ 20.00"
-                    android:textSize="14sp" />
+                    style="@style/rodape"
+                     />
             </TableRow>
 
             <TableRow
@@ -61,13 +63,13 @@
                     android:layout_height="wrap_content"
                     android:text="Saldo Mensal:"
                     android:layout_marginRight="5dp"
-                    android:textSize="14sp" />
+                    style="@style/rodape" />
                 <TextView
                     android:id="@+id/txtValorSaldoMensal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="R$ 30.00"
-                    android:textSize="14sp" />
+                    style="@style/rodape" />
             </TableRow>
 
             <TableRow
@@ -78,13 +80,13 @@
                     android:layout_height="wrap_content"
                     android:text="Saldo convertido em dolar:"
                     android:layout_marginRight="5dp"
-                    android:textSize="14sp" />
+                    style="@style/rodape" />
                 <TextView
                     android:id="@+id/txtValorSaldoDolar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text=" Calculando..."
-                    android:textSize="14sp" />
+                    style="@style/rodape" />
             </TableRow>
 
             <TableRow
@@ -95,13 +97,13 @@
                     android:layout_height="wrap_content"
                     android:text="Renda Mensal:"
                     android:layout_marginRight="5dp"
-                    android:textSize="14sp" />
+                    style="@style/rodape" />
                 <TextView
                     android:id="@+id/txtValorRendaMensal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="R$ 50.00"
-                    android:textSize="14sp" />
+                    style="@style/rodape" />
             </TableRow>
 
             <TableRow
@@ -112,13 +114,13 @@
                     android:layout_height="wrap_content"
                     android:text="Gasto Total:"
                     android:layout_marginRight="5dp"
-                    android:textSize="14sp" />
+                    style="@style/rodape" />
                 <TextView
                     android:id="@+id/txtValorGastoTotal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="R$ 70.00"
-                    android:textSize="14sp" />
+                    style="@style/rodape" />
             </TableRow>
         </TableLayout>
     </LinearLayout>
