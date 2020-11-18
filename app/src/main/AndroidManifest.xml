@@ -14,6 +14,8 @@
         <activity android:name=".AtvVerGastos"/>
         <activity android:name=".AtvAdicionarGasto" />
         <activity android:name=".AtvCriarConta" />
+        <activity android:name=".AtvMostraFornecedor"/>
+        <activity android:name=".AtvCriaFornecedor"/>
         <activity android:name=".AtvLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
