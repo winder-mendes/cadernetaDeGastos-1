@@ -1,96 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/txtLogo"
-        android:layout_width="243dp"
-        android:layout_height="41dp"
-        android:text="Caderneta de Gastos"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.185"
-        tools:text="@string/LoginTitle" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imgLogo"
-        android:layout_width="102dp"
-        android:layout_height="103dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.236"
-        app:srcCompat="@mipmap/ic_launcher" />
+        <TextView
+            android:id="@+id/txtLogo"
+            android:layout_width="243dp"
+            android:layout_height="41dp"
+            android:text="Caderneta de Gastos"
+            android:textSize="24sp" />
 
-    <EditText
-        android:id="@+id/user"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Usuario"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.384"
-        tools:text="@string/user" />
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="102dp"
+            android:layout_height="103dp"
+            android:layout_marginTop="40dp"
+            app:srcCompat="@mipmap/ic_launcher"/>
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:hint="Senha"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/password" />
+        <EditText
+            android:id="@+id/user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:ems="10"
+            android:hint="Usuario"
+            android:inputType="textPersonName" />
 
-    <Button
-        android:id="@+id/login"
-        android:layout_width="204dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="40dp"
-        android:text="Entrar"
-        android:onClick="entrar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.604"
-        tools:text="@string/btnEntrar" />
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="Senha"
+            android:inputType="textPassword" />
 
-    <Button
-        android:id="@+id/register"
-        android:layout_width="207dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="16dp"
-        android:onClick="btnCriarConta"
-        android:text="Criar Conta"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.714"
-        tools:text="@string/register" />
+        <Button
+            android:id="@+id/login"
+            android:layout_width="204dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="40dp"
+            android:onClick="entrar"
+            android:text="Entrar" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/register"
+            android:layout_width="207dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="16dp"
+            android:onClick="btnCriarConta"
+            android:text="Criar Conta" />
+
+    </LinearLayout>
+
+</ScrollView>
