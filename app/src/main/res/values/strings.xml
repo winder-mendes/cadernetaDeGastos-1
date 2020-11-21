@@ -63,5 +63,5 @@
     <string name="btn_criarEstabelecimento">Criar Estabelecimento</string>
     <string name="textView_cadernetaDeGastos">Caderneta de Gastos</string>
 
-
+    <string name="voltar">Voltar</string>
 </resources>

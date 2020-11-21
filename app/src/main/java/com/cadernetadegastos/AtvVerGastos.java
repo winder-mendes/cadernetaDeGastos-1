@@ -144,4 +144,8 @@ public class AtvVerGastos extends AppCompatActivity  implements AdapterView.OnIt
         Lancamento lancamento = arrayAdapter.getItem(position);
         Toast.makeText(this,lancamento.conteudo(),Toast.LENGTH_LONG).show();
     }
+
+    public void voltar(View v){
+        finish();
+    }
 }

@@ -61,7 +61,7 @@ public class Conexao extends SQLiteOpenHelper{
         categoriaDao.insert(trasporte);
 
         Categoria alimentacao = new Categoria();
-        trasporte.setDescricao("Alimentação");
+        alimentacao.setDescricao("Alimentação");
         categoriaDao.insert(alimentacao);
 
         Fornecedor semFornecedor = new Fornecedor();

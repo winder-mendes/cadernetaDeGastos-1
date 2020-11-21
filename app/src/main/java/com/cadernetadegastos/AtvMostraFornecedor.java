@@ -47,4 +47,8 @@ public class AtvMostraFornecedor extends AppCompatActivity implements AdapterVie
         atvCriaFornecedor.putExtra("idFornecedor",list.getItem(position).getId());
         startActivityForResult(atvCriaFornecedor,1);
     }
+
+    public void voltar(View v){
+        finish();
+    }
 }

@@ -7,6 +7,13 @@
     android:orientation="vertical"
     tools:context=".AtvVerGastos">
 
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="voltar"
+        android:text="@string/voltar" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -59,7 +60,8 @@ public class AtvAdicionarGasto extends AppCompatActivity {
         categorias = categoriaDao.list();
         List<String> nomesG = new ArrayList<>();
         for (Categoria categoria : categorias){
-            nomesF.add(categoria.getDescricao());
+            Log.e("descrição",categoria.getDescricao());
+            nomesG.add(categoria.getDescricao());
         }
 
         ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, nomesG);
