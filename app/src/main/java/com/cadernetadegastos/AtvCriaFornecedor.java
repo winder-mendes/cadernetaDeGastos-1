@@ -33,6 +33,13 @@ public class AtvCriaFornecedor extends AppCompatActivity {
         Button excluir = new Button(this);
         Button alterar = new Button(this);
         Button criar = new Button(this);
+        Button voltar = new Button(this);
+
+        voltar.setText(getString(R.string.voltar));
+        voltar.setOnClickListener((View v) -> {
+            finish();
+        });
+        tela.addView(voltar);
 
         Bundle extras = getIntent().getExtras();
         String acao = extras.getString("acao");

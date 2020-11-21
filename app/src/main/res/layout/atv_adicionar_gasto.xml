@@ -102,6 +102,13 @@
             android:onClick="adicionar"
             android:text="@string/adicionar" />
 
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="voltar"
+            android:text="@string/voltar" />
+
     </LinearLayout>
 
 </ScrollView>

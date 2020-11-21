@@ -111,4 +111,8 @@ public class AtvAdicionarGasto extends AppCompatActivity {
         UsuarioLogado usuarioLogado = new UsuarioLogado(this);
         return usuarioLogado.logado();
     }
+
+    public void voltar(View v){
+        finish();
+    }
 }
