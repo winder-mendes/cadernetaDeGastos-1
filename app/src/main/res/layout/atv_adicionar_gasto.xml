@@ -21,14 +21,23 @@
             android:textSize="30sp"
             android:text="@string/addGasto" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/descricao"/>
+
         <EditText
             android:id="@+id/editDescricao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5pt"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="@string/descricao" />
+            android:inputType="textPersonName"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/valor"/>
 
         <EditText
             android:id="@+id/editValor"
@@ -36,8 +45,12 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="5pt"
             android:ems="10"
-            android:inputType="numberDecimal"
-            android:hint="@string/valor" />
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/data"/>
 
         <EditText
             android:id="@+id/editData"
@@ -45,8 +58,12 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="5pt"
             android:ems="10"
-            android:inputType="date"
-            android:hint="@string/data" />
+            android:inputType="date" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tipo_gasto"/>
 
         <Spinner
             android:id="@+id/spinTipoGasto"
@@ -55,19 +72,27 @@
             android:layout_marginBottom="5pt"
             android:entries="@array/tipo_gasto" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/categoria"/>
+
         <Spinner
             android:id="@+id/spinCategoria"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5pt"
-            android:entries="@array/categorias" />
+            android:layout_marginBottom="5pt" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fornecedor"/>
 
         <Spinner
             android:id="@+id/spinEstabelecimento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5pt"
-            android:entries="@array/estabelecimentos" />
+            android:layout_marginBottom="5pt" />
 
         <Button
             android:id="@+id/btnAdicionar"

@@ -24,6 +24,10 @@
         <item>Sem estabelecimento</item>
     </string-array>
 
+    <string name="fornecedor">Fornecedor</string>
+    <string name="categoria">Categoria</string>
+    <string name="tipo_gasto">Tipo de Gasto</string>
+
     <string name="LoginTitle">Caderneta de Gastos</string>
     <string name="user">Usuario</string>
     <string name="password">Senha</string>
