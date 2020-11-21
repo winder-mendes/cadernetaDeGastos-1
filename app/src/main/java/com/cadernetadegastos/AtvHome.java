@@ -13,7 +13,11 @@ public class AtvHome extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
         usuarioLogado();
     }
 
@@ -26,11 +30,6 @@ public class AtvHome extends AppCompatActivity {
 
     public void addGasto(View v){
         Intent atvGastos = new Intent(this,AtvAdicionarGasto.class);
-        startActivity(atvGastos);
-    }
-
-    public void alterarRenda(View v){
-        Intent atvGastos = new Intent(this,AtvAlterarRenda.class);
         startActivity(atvGastos);
     }
 

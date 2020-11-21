@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".AtvHome"></activity>
-        <activity android:name=".AtvAlterarRenda" />
         <activity android:name=".AtvVerGastos"/>
         <activity android:name=".AtvAdicionarGasto" />
         <activity android:name=".AtvCriarConta" />
