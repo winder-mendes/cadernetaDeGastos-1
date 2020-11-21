@@ -27,6 +27,7 @@ public class AtvAdicionarGasto extends AppCompatActivity {
 
 
     List<Fornecedor> fornecedors;
+    List<Categoria> categorias;
 
 
     @Override
@@ -54,6 +55,16 @@ public class AtvAdicionarGasto extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, nomesF);
         spinEstabelecimento.setAdapter(adapter);
 
+        CategoriaDao categoriaDao = new CategoriaDao(this);
+        categorias = categoriaDao.list();
+        List<String> nomesG = new ArrayList<>();
+        for (Categoria categoria : categorias){
+            nomesF.add(categoria.getDescricao());
+        }
+
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, nomesG);
+        spinCategoria.setAdapter(adapter);
+
 
     }
 
@@ -69,10 +80,13 @@ public class AtvAdicionarGasto extends AppCompatActivity {
             lancamento.setTipo(spinTipoGasto.getSelectedItem().toString());
 
             int position = spinEstabelecimento.getSelectedItemPosition();
-            
+            int position2 = spinCategoria.getSelectedItemPosition();
+
             Fornecedor fornecedor = fornecedors.get(position);
+            Categoria categoria = categorias.get(position2);
 
             lancamento.setFornecedor(fornecedor);
+            lancamento.setCategoria(categoria);
 
             String strData = editData.getText().toString();
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
