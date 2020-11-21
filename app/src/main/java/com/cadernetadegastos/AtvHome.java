@@ -44,6 +44,11 @@ public class AtvHome extends AppCompatActivity {
         startActivity(atvMostraFornecedor);
     }
 
+    public void usuario(View v){
+        Intent atvAlterarConta = new Intent(this,AtvAlterarConta.class );
+        startActivity(atvAlterarConta);
+    }
+
     public void logout(View v){
         UsuarioLogado usuarioLogado = new UsuarioLogado(this);
         usuarioLogado.logout();

@@ -35,6 +35,7 @@
     <string name="register">Criar Conta</string>
 
     <string name="createAccount">Criar Conta</string>
+    <string name="alterar_conta">Alterar Conta</string>
     <string name="userName">Nome de Usuario</string>
     <string name="email">Email</string>
     <string name="phoneNumber">Numero de Telefone</string>
