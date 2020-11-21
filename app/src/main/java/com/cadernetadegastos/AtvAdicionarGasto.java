@@ -63,7 +63,7 @@ public class AtvAdicionarGasto extends AppCompatActivity {
         }
 
         ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, nomesG);
-        spinCategoria.setAdapter(adapter);
+        spinCategoria.setAdapter(adapter2);
 
 
     }
