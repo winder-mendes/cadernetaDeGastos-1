@@ -60,7 +60,6 @@ public class AtvAdicionarGasto extends AppCompatActivity {
         categorias = categoriaDao.list();
         List<String> nomesG = new ArrayList<>();
         for (Categoria categoria : categorias){
-            Log.e("descrição",categoria.getDescricao());
             nomesG.add(categoria.getDescricao());
         }
 
