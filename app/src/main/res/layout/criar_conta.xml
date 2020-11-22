@@ -19,15 +19,28 @@
             android:text="Criar Conta"
             style="@style/titulo"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            style="@style/text"
+            android:text="Nome de Usuario"/>
+
         <EditText
             android:id="@+id/userNameRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             style="@style/text"
-            android:hint="Nome de Usuario"
             android:inputType="textPersonName"
             android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            style="@style/text"
+            android:text="Senha"/>
 
         <EditText
             android:id="@+id/passwordRegister"
@@ -35,9 +48,15 @@
             android:layout_height="wrap_content"
             android:ems="10"
             style="@style/text"
-            android:hint="Senha"
             android:inputType="textPassword"
             android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            style="@style/text"
+            android:text="Numero de Telefone"/>
 
         <EditText
             android:id="@+id/phoneNumberRegister"
@@ -45,9 +64,15 @@
             android:layout_height="wrap_content"
             android:ems="10"
             style="@style/text"
-            android:hint="Numero de Telefone"
             android:inputType="textPersonName"
             android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            style="@style/text"
+            android:text="Confirmar Senha"/>
 
         <EditText
             android:id="@+id/confirmPasswordRegister"
@@ -55,9 +80,15 @@
             android:layout_height="wrap_content"
             android:ems="10"
             style="@style/text"
-            android:hint="Confirmar Senha"
             android:inputType="textPassword"
             android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            style="@style/text"
+            android:text="Email"/>
 
         <EditText
             android:id="@+id/emailRegister"
@@ -65,7 +96,6 @@
             android:layout_height="wrap_content"
             android:ems="10"
             style="@style/text"
-            android:hint="Email"
             android:inputType="textPersonName"
             android:layout_margin="10dp"/>
 
