@@ -7,6 +7,26 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="titulo">
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_margin">10px</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="botao">
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_margin">20px</item>
+        <item name="android:layout_width">208dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:background">@color/colorBotao</item>
+    </style>
+
+    <style name="text">
+        <item name="android:textSize">18sp</item>
+    </style>
+
     <style name="rodape">
         <item name="android:textSize">20sp</item>
     </style>

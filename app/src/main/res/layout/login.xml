@@ -14,10 +14,10 @@
 
         <TextView
             android:id="@+id/txtLogo"
-            android:layout_width="243dp"
-            android:layout_height="41dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Caderneta de Gastos"
-            android:textSize="24sp" />
+            style="@style/titulo"/>
 
         <ImageView
             android:id="@+id/imgLogo"
@@ -32,6 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="56dp"
             android:ems="10"
+            style="@style/text"
             android:hint="Usuario"
             android:inputType="textPersonName" />
 
@@ -41,22 +42,19 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:ems="10"
+            style="@style/text"
             android:hint="Senha"
             android:inputType="textPassword" />
 
         <Button
             android:id="@+id/login"
-            android:layout_width="204dp"
-            android:layout_height="42dp"
-            android:layout_marginTop="40dp"
+            style="@style/botao"
             android:onClick="entrar"
             android:text="Entrar" />
 
         <Button
             android:id="@+id/register"
-            android:layout_width="207dp"
-            android:layout_height="39dp"
-            android:layout_marginTop="16dp"
+            style="@style/botao"
             android:onClick="btnCriarConta"
             android:text="Criar Conta" />
 

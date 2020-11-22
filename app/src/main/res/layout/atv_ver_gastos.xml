@@ -10,8 +10,8 @@
     <Button
         android:id="@+id/btnVoltar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:onClick="voltar"
+        style="@style/botao"
         android:text="@string/voltar" />
 
     <TextView
@@ -19,9 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/ver_gastos"
-        android:textSize="30sp"
-        android:gravity="center_horizontal"
-        android:layout_marginBottom="10dp" />
+        style="@style/titulo" />
 
 
     <ListView

@@ -17,45 +17,84 @@
             android:id="@+id/txtNome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/text"
             android:text="Nome"/>
 
         <EditText
             android:id="@+id/editNome"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            style="@style/text"/>
 
         <TextView
             android:id="@+id/txtTelefone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/text"
             android:text="Telefone"/>
 
         <EditText
             android:id="@+id/editTelefone"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            style="@style/text"/>
 
         <TextView
             android:id="@+id/txtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/text"
             android:text="Email"/>
 
         <EditText
             android:id="@+id/editEmail"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            style="@style/text"/>
 
         <TextView
             android:id="@+id/txtUf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/text"
             android:text="uf"/>
 
         <EditText
             android:id="@+id/editUf"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            style="@style/text"/>
+
+        <Button android:id="@+id/btnVoltar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            style="@style/botao"
+            android:onClick="voltar"
+            android:text="@string/voltar" />
+
+        <Button android:id="@+id/btnCadastrar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            style="@style/botao"
+            android:onClick="criar"
+            android:visibility="gone"
+            android:text="@string/btn_criarCategoria" />
+
+        <Button android:id="@+id/btnAlterar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            style="@style/botao"
+            android:onClick="alterar"
+            android:visibility="gone"
+            android:text="@string/btnAlterar" />
+
+        <Button android:id="@+id/btnExcluir"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            style="@style/botao"
+            android:onClick="excluir"
+            android:visibility="gone"
+            android:text="@string/excluir" />
 
     </LinearLayout>
 

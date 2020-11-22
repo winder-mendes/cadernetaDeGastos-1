@@ -16,96 +16,104 @@
             android:id="@+id/txtAdicionarGasto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5pt"
-            android:gravity="center_horizontal"
-            android:textSize="30sp"
+            style="@style/titulo"
             android:text="@string/addGasto" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/text"
             android:text="@string/descricao"/>
 
         <EditText
             android:id="@+id/editDescricao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5pt"
+            style="@style/text"
             android:ems="10"
             android:inputType="textPersonName"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/text"
             android:text="@string/valor"/>
 
         <EditText
             android:id="@+id/editValor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5pt"
+            style="@style/text"
             android:ems="10"
             android:inputType="numberDecimal"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/text"
             android:text="@string/data"/>
 
         <EditText
             android:id="@+id/editData"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5pt"
+            style="@style/text"
             android:ems="10"
             android:inputType="date" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/text"
             android:text="@string/tipo_gasto"/>
 
         <Spinner
             android:id="@+id/spinTipoGasto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/text"
             android:layout_marginBottom="5pt"
             android:entries="@array/tipo_gasto" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/text"
             android:text="@string/categoria"/>
 
         <Spinner
             android:id="@+id/spinCategoria"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5pt" />
+            android:layout_marginBottom="5pt"
+            style="@style/text"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/text"
             android:text="@string/fornecedor"/>
 
         <Spinner
             android:id="@+id/spinEstabelecimento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5pt" />
+            android:layout_marginBottom="5pt"
+            style="@style/text"/>
 
         <Button
             android:id="@+id/btnAdicionar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginBottom="5pt"
+            style="@style/botao"
             android:onClick="adicionar"
             android:text="@string/adicionar" />
 
         <Button
             android:id="@+id/btnVoltar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5pt"
+            style="@style/botao"
             android:onClick="voltar"
             android:text="@string/voltar" />
 

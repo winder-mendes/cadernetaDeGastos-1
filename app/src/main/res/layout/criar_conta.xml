@@ -14,17 +14,17 @@
 
         <TextView
             android:id="@+id/txtRegister"
-            android:layout_width="127dp"
-            android:layout_height="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Criar Conta"
-            android:textSize="24sp"
-            android:layout_margin="10dp"/>
+            style="@style/titulo"/>
 
         <EditText
             android:id="@+id/userNameRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            style="@style/text"
             android:hint="Nome de Usuario"
             android:inputType="textPersonName"
             android:layout_margin="10dp"/>
@@ -34,6 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            style="@style/text"
             android:hint="Senha"
             android:inputType="textPassword"
             android:layout_margin="10dp"/>
@@ -43,6 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            style="@style/text"
             android:hint="Numero de Telefone"
             android:inputType="textPersonName"
             android:layout_margin="10dp"/>
@@ -52,6 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            style="@style/text"
             android:hint="Confirmar Senha"
             android:inputType="textPassword"
             android:layout_margin="10dp"/>
@@ -61,16 +64,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            style="@style/text"
             android:hint="Email"
             android:inputType="textPersonName"
             android:layout_margin="10dp"/>
 
         <Button
             android:id="@+id/btnFinishRegister"
-            android:layout_width="202dp"
-            android:layout_height="41dp"
             android:onClick="btnCadastrar"
             android:text="Cadastrar"
+            style="@style/botao"
             android:layout_margin="10dp"/>
 
         <TextView
@@ -78,14 +81,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ou se já tem uma conta"
-            android:textSize="18sp"
+            style="@style/text"
             android:layout_margin="10dp"/>
 
         <Button
             android:id="@+id/btnGoForLogin"
-            android:layout_width="203dp"
-            android:layout_height="40dp"
             android:onClick="btnEntrar"
+            style="@style/botao"
             android:text="Entrar"
             android:layout_margin="10dp"/>
 

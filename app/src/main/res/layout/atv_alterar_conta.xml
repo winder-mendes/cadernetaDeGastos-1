@@ -15,14 +15,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/alterar_conta"
-            android:textSize="24sp"
-            android:layout_margin="10dp"/>
+            style="@style/titulo"/>
 
         <EditText
             android:id="@+id/userNameRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            style="@style/text"
             android:hint="Nome de Usuario"
             android:inputType="textPersonName"
             android:layout_margin="10dp"/>
@@ -32,6 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            style="@style/text"
             android:hint="Email"
             android:inputType="textPersonName"
             android:layout_margin="10dp"/>
@@ -41,6 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            style="@style/text"
             android:hint="Numero de Telefone"
             android:inputType="textPersonName"
             android:layout_margin="10dp"/>
@@ -50,25 +52,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            style="@style/text"
             android:hint="Renda"
             android:inputType="numberDecimal"
             android:layout_margin="10dp"/>
 
         <Button
             android:id="@+id/btnVoltar"
-            android:layout_width="202dp"
-            android:layout_height="41dp"
             android:onClick="voltar"
             android:text="@string/voltar"
-            android:layout_margin="10dp"/>
+            style="@style/botao"/>
 
         <Button
             android:id="@+id/btnFinishRegister"
-            android:layout_width="202dp"
-            android:layout_height="41dp"
             android:onClick="btnAlterar"
             android:text="@string/btnAlterar"
-            android:layout_margin="10dp"/>
+            style="@style/botao"/>
 
     </LinearLayout>
 

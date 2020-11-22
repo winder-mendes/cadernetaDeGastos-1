@@ -1,24 +1,18 @@
 package com.cadernetadegastos;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class AtvCriaFornecedor extends AppCompatActivity {
     private TextView editNome;
     private TextView editEmail;
     private TextView editTelefone;
     private TextView editUf;
-
-    private Button cadastrar;
-    private Button alterar;
-    private Button excluir;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,59 +24,53 @@ public class AtvCriaFornecedor extends AppCompatActivity {
         LinearLayout tela = findViewById(R.id.tela);
         FornecedorDao fornecedorDao = new FornecedorDao(this);
 
-        Button excluir = new Button(this);
-        Button alterar = new Button(this);
-        Button criar = new Button(this);
-        Button voltar = new Button(this);
-
-        voltar.setText(getString(R.string.voltar));
-        voltar.setOnClickListener((View v) -> {
-            finish();
-        });
-        tela.addView(voltar);
-
         Bundle extras = getIntent().getExtras();
         String acao = extras.getString("acao");
 
-        excluir.setText("Excluir");
-        excluir.setOnClickListener((View v) -> {
-            Long id = extras.getLong("idFornecedor");
-            Fornecedor fornecedor = fornecedorDao.get(id);
-
-            fornecedorDao.remove(fornecedor);
-            finish();
-        });
-
-        alterar.setText("Alterar");
-        alterar.setOnClickListener((View v) -> {
-            Long id = extras.getLong("idFornecedor");
-            Fornecedor fornecedor = fornecedorDao.get(id);
-
-            atualizarValoresFornecedor(fornecedor);
-            fornecedorDao.update(fornecedor);
-            finish();
-        });
-
-        criar.setText("Criar");
-        criar.setOnClickListener((View v) -> {
-            Fornecedor fornecedor = new Fornecedor();
-            atualizarValoresFornecedor(fornecedor);
-
-            fornecedorDao.insert(fornecedor);
-            finish();
-        });
-
         if(acao.equals("cadastrar")){
-            tela.addView(criar);
+            findViewById(R.id.btnCadastrar).setVisibility(View.VISIBLE);
         }else if(acao.equals("alterar")){
-            Long id = extras.getLong("idFornecedor");
+            findViewById(R.id.btnAlterar).setVisibility(View.VISIBLE);
+            findViewById(R.id.btnExcluir).setVisibility(View.VISIBLE);
 
+            Long id = extras.getLong("idFornecedor");
             Fornecedor fornecedor = fornecedorDao.get(id);
             preencherTela(fornecedor);
-
-            tela.addView(alterar);
-            tela.addView(excluir);
         }
+    }
+
+    public void excluir(View v){
+        FornecedorDao fornecedorDao = new FornecedorDao(this);
+        Bundle extras = getIntent().getExtras();
+        Long id = extras.getLong("idFornecedor");
+        Fornecedor fornecedor = fornecedorDao.get(id);
+
+        fornecedorDao.remove(fornecedor);
+        finish();
+    }
+
+    public void alterar(View v){
+        FornecedorDao fornecedorDao = new FornecedorDao(this);
+        Bundle extras = getIntent().getExtras();
+        Long id = extras.getLong("idFornecedor");
+        Fornecedor fornecedor = fornecedorDao.get(id);
+
+        atualizarValoresFornecedor(fornecedor);
+        fornecedorDao.update(fornecedor);
+        finish();
+    }
+
+    public void criar(View v){
+        FornecedorDao fornecedorDao = new FornecedorDao(this);
+        Fornecedor fornecedor = new Fornecedor();
+        atualizarValoresFornecedor(fornecedor);
+
+        fornecedorDao.insert(fornecedor);
+        finish();
+    }
+
+    public void voltar(View v){
+        finish();
     }
 
     private void carregarComponentes(){
