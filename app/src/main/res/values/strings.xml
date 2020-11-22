@@ -54,7 +54,7 @@
     <string name="gasto_total">Gasto Total</string>
 
     <string name="TextAlterarRenda">Alterar Renda</string>
-    <string name="editTexNovaRenda">Nova Renda</string>
+    <string name="editTexNovaRenda">Renda</string>
     <string name="btnAlterar">Alterar</string>
 
     <string name="btn_adicionarGastos">Adicionar Gastos</string>

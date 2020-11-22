@@ -17,15 +17,28 @@
             android:text="@string/alterar_conta"
             style="@style/titulo"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            style="@style/text"
+            android:text="@string/userName"/>
+
         <EditText
             android:id="@+id/userNameRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             style="@style/text"
-            android:hint="Nome de Usuario"
             android:inputType="textPersonName"
             android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            style="@style/text"
+            android:text="@string/email"/>
 
         <EditText
             android:id="@+id/emailRegister"
@@ -33,9 +46,15 @@
             android:layout_height="wrap_content"
             android:ems="10"
             style="@style/text"
-            android:hint="Email"
             android:inputType="textPersonName"
             android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            style="@style/text"
+            android:text="@string/phoneNumber"/>
 
         <EditText
             android:id="@+id/phoneNumberRegister"
@@ -43,9 +62,15 @@
             android:layout_height="wrap_content"
             android:ems="10"
             style="@style/text"
-            android:hint="Numero de Telefone"
             android:inputType="textPersonName"
             android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            style="@style/text"
+            android:text="@string/editTexNovaRenda"/>
 
         <EditText
             android:id="@+id/edtRenda"
@@ -53,7 +78,6 @@
             android:layout_height="wrap_content"
             android:ems="10"
             style="@style/text"
-            android:hint="Renda"
             android:inputType="numberDecimal"
             android:layout_margin="10dp"/>
 
