@@ -102,11 +102,30 @@
             style="@style/text"/>
 
         <Button
+            android:id="@+id/btnExcluir"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5pt"
+            style="@style/botao"
+            android:onClick="excluir"
+            android:visibility="gone"
+            android:text="@string/excluir" />
+
+        <Button
+            android:id="@+id/btnAlterar"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5pt"
+            style="@style/botao"
+            android:onClick="alterar"
+            android:visibility="gone"
+            android:text="@string/btnAlterar" />
+
+        <Button
             android:id="@+id/btnAdicionar"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="5pt"
             style="@style/botao"
             android:onClick="adicionar"
+            android:visibility="gone"
             android:text="@string/adicionar" />
 
         <Button

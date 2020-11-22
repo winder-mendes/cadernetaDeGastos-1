@@ -3,6 +3,7 @@ package com.cadernetadegastos;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -40,6 +41,11 @@ public class AtvVerGastos extends AppCompatActivity  implements AdapterView.OnIt
         setContentView(R.layout.atv_ver_gastos);
 
         extraindoCampos();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
 
         UsuarioLogado usuarioLogado = new UsuarioLogado(this);
         Usuario usuario = usuarioLogado.logado();
@@ -142,7 +148,10 @@ public class AtvVerGastos extends AppCompatActivity  implements AdapterView.OnIt
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Lancamento lancamento = arrayAdapter.getItem(position);
-        Toast.makeText(this,lancamento.conteudo(),Toast.LENGTH_LONG).show();
+        Intent atvAdicionarGasto = new Intent(this,AtvAdicionarGasto.class);
+        atvAdicionarGasto.putExtra("acao","alterar");
+        atvAdicionarGasto.putExtra("idLancamento",lancamento.getId());
+        startActivity(atvAdicionarGasto);
     }
 
     public void voltar(View v){
