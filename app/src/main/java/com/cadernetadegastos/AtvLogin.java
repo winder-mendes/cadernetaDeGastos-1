@@ -1,8 +1,10 @@
 package com.cadernetadegastos;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -15,6 +17,9 @@ public class AtvLogin extends AppCompatActivity {
     private UsuarioLogado usuarioLogado;
     private EditText user;
     private EditText password;
+    private CheckBox boxLembrarLogin;
+
+    SharedPreferences pref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +32,14 @@ public class AtvLogin extends AppCompatActivity {
 
         user = findViewById(R.id.user);
         password =findViewById(R.id.password);
+        boxLembrarLogin = findViewById(R.id.boxLembrarLogin);
 
-        oUsuarioEstaLogado();
+        pref = this.getSharedPreferences("config",0);
+        boxLembrarLogin.setChecked(pref.getBoolean("lembrarLogin",false));
+
+        if(boxLembrarLogin.isChecked()){
+            oUsuarioEstaLogado();
+        }
     }
 
     private void oUsuarioEstaLogado() {
@@ -50,6 +61,9 @@ public class AtvLogin extends AppCompatActivity {
 
         Usuario usuario = buscar(login,senha);
         if(usuario != null){
+            SharedPreferences.Editor editor = pref.edit();
+            editor.putBoolean("lembrarLogin",boxLembrarLogin.isChecked());
+            editor.commit();
             usuarioLogado.logar(usuario);
             mudarParaTelaHome();
         }else{

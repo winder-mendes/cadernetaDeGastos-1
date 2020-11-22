@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">caderneta_de_gastos</string>
 
+    <string name="lembrarLogin">Lembrar Login</string>
+
     <string name="addGasto">Adicionar Gasto</string>
     <string name="nome">Nome</string>
     <string name="valor">Valor</string>

@@ -33,7 +33,7 @@
             android:layout_marginTop="56dp"
             android:ems="10"
             style="@style/text"
-            android:hint="Usuario"
+            android:hint="@string/user"
             android:inputType="textPersonName" />
 
         <EditText
@@ -43,8 +43,16 @@
             android:layout_marginTop="24dp"
             android:ems="10"
             style="@style/text"
-            android:hint="Senha"
+            android:hint="@string/password"
             android:inputType="textPassword" />
+
+        <CheckBox
+            android:id="@+id/boxLembrarLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            style="@style/text"
+            android:text="@string/lembrarLogin" />
 
         <Button
             android:id="@+id/login"
