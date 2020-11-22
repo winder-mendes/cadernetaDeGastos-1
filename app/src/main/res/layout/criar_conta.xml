@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             style="@style/text"
-            android:text="Nome de Usuario"/>
+            android:text="@string/userName"/>
 
         <EditText
             android:id="@+id/userNameRegister"
@@ -40,23 +40,23 @@
             android:layout_height="wrap_content"
             android:ems="10"
             style="@style/text"
-            android:text="Email"/>
+            android:text="@string/email"/>
 
         <EditText
             android:id="@+id/emailRegister"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
             style="@style/text"
-            android:inputType="textPersonName"
-            android:layout_margin="10dp"/>
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             style="@style/text"
-            android:text="Numero de Telefone"/>
+            android:text="@string/phoneNumber"/>
 
         <EditText
             android:id="@+id/phoneNumberRegister"
@@ -72,7 +72,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             style="@style/text"
-            android:text="Senha"/>
+            android:text="@string/createPassword"/>
 
         <EditText
             android:id="@+id/passwordRegister"
@@ -88,7 +88,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             style="@style/text"
-            android:text="Confirmar Senha"/>
+            android:text="@string/confirmPassword"/>
 
         <EditText
             android:id="@+id/confirmPasswordRegister"
