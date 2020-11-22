@@ -134,6 +134,7 @@
             android:layout_marginBottom="5pt"
             style="@style/botao"
             android:onClick="voltar"
+            android:visibility="gone"
             android:text="@string/voltar" />
 
     </LinearLayout>

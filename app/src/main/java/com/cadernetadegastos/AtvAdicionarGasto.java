@@ -30,6 +30,7 @@ public class AtvAdicionarGasto extends AppCompatActivity {
     private Button btnAlterar;
     private Button btnExcluir;
     private Button btnAdicionar;
+    private Button btnVoltar;
 
     List<Fornecedor> fornecedors;
     List<Categoria> categorias;
@@ -57,6 +58,7 @@ public class AtvAdicionarGasto extends AppCompatActivity {
             btnExcluir.setVisibility(View.VISIBLE);
             btnAlterar.setVisibility(View.VISIBLE);
         }else{
+            btnVoltar.setVisibility(View.VISIBLE);
             btnAdicionar.setVisibility(View.VISIBLE);
         }
     }
@@ -72,6 +74,7 @@ public class AtvAdicionarGasto extends AppCompatActivity {
         btnAlterar = findViewById(R.id.btnAlterar);
         btnExcluir = findViewById(R.id.btnExcluir);
         btnAdicionar = findViewById(R.id.btnAdicionar);
+        btnVoltar = findViewById(R.id.btnVoltar);
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         editData.setText(sdf.format(new Date()));
