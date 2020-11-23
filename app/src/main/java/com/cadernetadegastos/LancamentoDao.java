@@ -120,8 +120,12 @@ public class LancamentoDao implements Dao<Lancamento>{
             DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
             try {
                 String data = c.getString(2);
-                Log.i("DAO","data " + data);
-                lancamento.setData(df.parse(data));
+                if(data != null){
+                    lancamento.setData(df.parse(data));
+                }else{
+                    lancamento.setData(null);
+                }
+
             } catch (ParseException e) {
                 lancamento.setData(null);
                 e.printStackTrace();
