@@ -16,7 +16,7 @@ import java.util.List;
 public class CategoriaDaoTest {
 
     @Test
-    public void insertAndGet(){
+    public void test(){
         final Context context = ApplicationProvider.getApplicationContext();
 
         CategoriaDao categoriaDao = new CategoriaDao(context);
@@ -25,12 +25,25 @@ public class CategoriaDaoTest {
         categoria.setDescricao("alimentação");
 
         long id = categoriaDao.insert(categoria);
+        assertNotEquals(-1,id);
         Categoria categoriaDoBanco = categoriaDao.get(id);
+        assertNotEquals(null,categoriaDoBanco);
         assertEquals("alimentação",categoriaDoBanco.getDescricao());
+
+        categoria.setDescricao("posto");
+        categoriaDao.update(categoria);
+
+        categoriaDoBanco = categoriaDao.get(id);
+        assertNotEquals(null,categoriaDoBanco);
+        assertEquals("posto",categoriaDoBanco.getDescricao());
+
+        categoriaDao.remove(categoria);
+        categoriaDoBanco = categoriaDao.get(id);
+        assertEquals(null,categoriaDoBanco);
     }
 
     @Test
-    public void removeAndList(){
+    public void testList(){
         final Context context = ApplicationProvider.getApplicationContext();
 
         CategoriaDao categoriaDao = new CategoriaDao(context);
@@ -54,22 +67,4 @@ public class CategoriaDaoTest {
         assertEquals(1, categorias.size());
     }
 
-    @Test
-    public void update(){
-        final Context context = ApplicationProvider.getApplicationContext();
-
-        CategoriaDao categoriaDao = new CategoriaDao(context);
-
-        Categoria categoria = new Categoria();
-        categoria.setDescricao("alimentação");
-
-        long id = categoriaDao.insert(categoria);
-
-        categoria.setDescricao("posto");
-
-        categoriaDao.update(categoria);
-
-        Categoria categoriaDoBanco = categoriaDao.get(id);
-        assertEquals("posto",categoriaDoBanco.getDescricao());
-    }
 }
